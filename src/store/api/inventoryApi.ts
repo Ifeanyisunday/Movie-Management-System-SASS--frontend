@@ -1,11 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "../store";
 import type { Inventory, PaginatedResponse } from "../../lib/types";
+import { BACKEND_URL } from "../../config/api";
+
 
 
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:8000/api/",
+  baseUrl: `${BACKEND_URL}`,
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.tokens?.access;
     if (token) headers.set("Authorization", `Bearer ${token}`);

@@ -102,3 +102,29 @@ cd movie-rental-frontend
 npm install
 
 npm run dev
+
+
+# Key Architecture Decisions
+
+RTK Query for efficient API caching
+
+Role-based UI rendering
+
+Scalable folder structure
+
+Fully typed TypeScript interfaces
+
+Reusable UI components
+
+
+# Future Improvements
+
+Payment integration
+
+Movie images upload
+
+Vendor-specific analytics
+
+Notifications
+
+Dark mode
