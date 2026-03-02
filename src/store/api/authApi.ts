@@ -19,11 +19,11 @@ export const authApi = createApi({
   baseQuery,
   tagTypes: ["Profile", "Users"],
   endpoints: (builder) => ({
-    login: builder.mutation<AuthTokens, LoginCredentials>({
-      query: (creds) => ({ url: "auth/login/", method: "POST", body: creds }),
-    }),
     register: builder.mutation<User, RegisterData>({
       query: (data) => ({ url: "auth/register/", method: "POST", body: data }),
+    }),
+    login: builder.mutation<AuthTokens, LoginCredentials>({
+      query: (creds) => ({ url: "auth/login/", method: "POST", body: creds }),
     }),
     getProfile: builder.query<User, void>({
       query: () => "users/me/",

@@ -24,7 +24,7 @@ const LoginPage = () => {
     try {
       const tokens = await login({ username, password }).unwrap();
       dispatch(setCredentials({ tokens }));
-      // console.log("Redux auth state after login:", store.getState().auth)
+      
       // Fetch profile
       const { data: profile } = await api.get("users/me/");
       dispatch(setUser(profile));
