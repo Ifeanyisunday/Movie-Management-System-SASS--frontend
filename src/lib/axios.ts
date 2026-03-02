@@ -1,9 +1,10 @@
 import axios from "axios";
+import { BACKEND_URL } from "../config/api";
 
-const API_BASE_URL = "http://localhost:8000/api/";
+const BASE_URL = BACKEND_URL;
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: BASE_URL,
   headers: { "Content-Type": "application/json" },
 });
 
@@ -28,7 +29,7 @@ api.interceptors.response.use(
       if (tokens) {
         try {
           const { refresh } = JSON.parse(tokens);
-          const { data } = await axios.post(`${API_BASE_URL}token/refresh/`, { refresh });
+          const { data } = await axios.post(`${BASE_URL}token/refresh/`, { refresh });
           localStorage.setItem(
             "tokens",
             JSON.stringify({ access: data.access, refresh })
