@@ -46,8 +46,7 @@ const AdminPage = () => {
     }
   };
 
-// console.log(usersData?.results);
-  
+
 
 
   return (
@@ -199,7 +198,6 @@ const AdminPage = () => {
                     {inventoryData?.results.map((inventory: Inventory) => (
                       <TableRow key={inventory.id}>
                         <TableCell className="font-medium">{inventory.movie ?? `Movie #${inventory.movie}`}</TableCell>
-                        {/* <TableCell>{inventory.total_copies}</TableCell> */}
                         <TableCell>
                           <Badge variant={inventory.available_copies > 0 ? "secondary" : "destructive"}>
                             {inventory.available_copies}

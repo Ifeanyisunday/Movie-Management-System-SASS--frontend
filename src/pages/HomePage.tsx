@@ -42,9 +42,6 @@ const HomePage = () => {
       {/* Hero */}
       {heroMovie && !searchQuery && !selectedGenre && currentPage === 1 && (
         <section className="relative flex h-[50vh] items-end overflow-hidden bg-linear-to-br from-muted to-background">
-          {/* {heroMovie.image_url && (
-            <img alt={heroMovie.title} className="absolute inset-0 h-full w-full object-cover opacity-30" />
-          )} */}
           <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
           <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-12">
             <h1 className="text-4xl font-black tracking-tight text-foreground md:text-6xl">{heroMovie.title}</h1>

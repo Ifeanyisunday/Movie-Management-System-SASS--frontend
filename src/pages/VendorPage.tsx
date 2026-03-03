@@ -78,9 +78,6 @@ const VendorPage = () => {
   };
 
 
-  // console.log(inventoryData?.results);
-
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -240,7 +237,6 @@ const VendorPage = () => {
                   <TableHeader>
                     <TableRow>
                       <TableHead>Movie</TableHead>
-                      {/* <TableHead>Total Copies</TableHead> */}
                       <TableHead>Available Copies</TableHead>
                       <TableHead>Rented Out</TableHead>
                     </TableRow>
@@ -251,7 +247,6 @@ const VendorPage = () => {
             
                       <TableRow key={inventory.id}>
                         <TableCell className="font-medium">{inventory.movie_title}</TableCell>
-                        {/* <TableCell>{inventory.total_copies}</TableCell> */}
                         <TableCell>
                           <Badge variant={inventory.available_copies > 0 ? "secondary" : "destructive"}>
                             {inventory.available_copies}
