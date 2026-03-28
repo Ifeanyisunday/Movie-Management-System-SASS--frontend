@@ -127,4 +127,4 @@ Vendor-specific analytics
 
 Notifications
 
-Dark mode
+Dark mode screens
